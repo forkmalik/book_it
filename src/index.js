@@ -1,13 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
+import {compose, createStore} from "redux";
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {rootReducer} from "./redux/rootReducer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const store = createStore(rootReducer, compose(
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+));
+
+const app = (
+    <Provider store={store}>
+        <App />
+    </Provider>
+)
+
+const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      {app}
   </React.StrictMode>
 );
 

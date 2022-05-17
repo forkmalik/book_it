@@ -1,0 +1,5 @@
+export const DISPLAY_TYPE = 'BK_DISPLAY_TYPE';
+export const DISPLAY_CLASS = 'BK_DISPLAY_CLASS';
+export const DISPLAY_DATE = 'BK_DISPLAY_DATE';
+export const DISPLAY_CONFIRM = 'BK_DISPLAY_CONFIRM';
+export const LOAD_CLASS = 'BK_LOAD_CLASS';

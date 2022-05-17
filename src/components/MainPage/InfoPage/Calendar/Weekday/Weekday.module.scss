@@ -1,0 +1,23 @@
+li {
+  margin-bottom: 10px;
+}
+.weekday {
+  display: inline-block;
+  margin-left: 15px;
+  height: 25px;
+  text-align: center;
+}
+.weekend {
+  display: block;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  font-size: 16px;
+}
+.day {
+  color: #DF711B;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+

@@ -1,0 +1,20 @@
+.undText {
+  max-height: 15%;
+  margin-left: 200px;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 25px;
+  font-weight: 500;
+  color: #df711b;
+  &::after {
+    display: block;
+    margin-top: 20px;
+    content: "";
+    max-width: 85%;
+    height: 1px;
+    width: 100%;
+    background-color: #df711b;
+  }
+}
