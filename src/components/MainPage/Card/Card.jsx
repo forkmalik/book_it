@@ -11,8 +11,12 @@ const Card = (props) => {
             </div>
 
             <h3 className={style.type__title}>{props.title}</h3>
-            <InfoBlock time={props.time} cardType={props.cardType}/>
-            <button className={style.type__selectButton}>Select</button>
+            <InfoBlock time={props.time} camp={props.camp} />
+            <button className={style.type__selectButton}
+                    onClick={() => {
+                        props.displayPage()
+                        props.selectType()
+                    }}>Select</button>
         </div>
     );
 };

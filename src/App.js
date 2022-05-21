@@ -2,20 +2,38 @@ import './App.css';
 import Header from "./components/Header/Header";
 import MainPage from "./components/MainPage/MainPage";
 import {useDispatch} from "react-redux";
-import {displayType} from "./redux/actions";
+import {displayClasses, displayType, selectLecture, selectPractice} from "./redux/actions";
 
 
 function App() {
     const dispatch = useDispatch();
 
-    const changeDisplayHandler = () => {
+    const displayTypeHandler = () => {
         dispatch(displayType());
+    }
+
+    const displayClassHandler = () => {
+        dispatch(displayClasses());
+    }
+
+    const selectLectureHandler = () => {
+        dispatch(selectLecture());
+    }
+
+    const selectPracticeHandler = () => {
+        dispatch(selectPractice());
+    }
+
+    const mainPageHandlers = {
+        displayClassHandler,
+        selectLectureHandler,
+        selectPracticeHandler
     }
 
     return (
         <div className="app">
-            <Header changeDisplay={changeDisplayHandler}/>
-            <MainPage />
+            <Header displayType={displayTypeHandler}/>
+            <MainPage handlers={mainPageHandlers}/>
         </div>
 
     );

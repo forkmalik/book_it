@@ -3,14 +3,17 @@ import InfoPage from "./InfoPage/InfoPage";
 import style from "./MainPage.module.scss";
 import TypePage from "./TypePage/TypePage";
 import {connect} from "react-redux";
+import Classes from "./Classes/Classes";
 
 const MainPage = (props) => {
+
+    console.log(props);
 
     return (
         <div className={style.wrapper} >
             {props.display.display === "info" && <InfoPage />}
-            {props.display.display === "type" && <TypePage />}
-            {/*<InfoPage />*/}
+            {props.display.display === "type" && <TypePage handlers={props.handlers}/>}
+            {props.display.display === "class" && <Classes type={props.classType.classType}/>}
             {/*<TypePage />*/}
         </div>
     );
@@ -19,7 +22,8 @@ const MainPage = (props) => {
 
     function mapStateToProps (state) {
         return {
-            display: state.display
+            display: state.display,
+            classType: state.classType
         }
     }
 

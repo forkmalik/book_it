@@ -5,13 +5,17 @@ import Card from "../Card/Card";
 import lecImg from "../../../assets/lec.png";
 import pracImg from "../../../assets/prac.png";
 
-const TypePage = () => {
+const TypePage = (props) => {
     return (
         <div>
             <UnderlinedText name="types" />
             <div className={style.types}>
-                <Card title="Lecture class" time="1:20 h" img={lecImg} type="lecture" cardType="classType"/>
-                <Card title="Practice class" time="1:20 h" img={pracImg} type="practice" cardType="classType"/>
+                <Card title="Lecture class" camp="Central" img={lecImg}
+                      type="lecture" displayPage={props.handlers.displayClassHandler}
+                        selectType={props.handlers.selectLectureHandler}/>
+                <Card title="Practice class" camp="Central" img={pracImg}
+                      type="practice" displayPage={props.handlers.displayClassHandler}
+                        selectType={props.handlers.selectPracticeHandler}/>
             </div>
         </div>
     );

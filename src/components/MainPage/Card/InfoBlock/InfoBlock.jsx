@@ -6,18 +6,10 @@ import style from "./InfoBlock.module.scss";
 const InfoBlock = (props) => {
     return (
         <div className={style.info}>
-            {props.cardType === "classType" &&
-                <div>
-                    <FontAwesomeIcon  className={style.type__icon} icon={regular('clock')} />
-                    <span className={style.type__text}>{props.time}</span>
-                </div>
-            }
-            {props.cardType === "classes" &&
-                <div>
-                    <FontAwesomeIcon  className={style.type__icon} icon={regular('building')} />
-                    <span className={style.type__text}>{props.camp}</span>
-                </div>
-            }
+            <div>
+                <FontAwesomeIcon  className={style.type__icon} icon={regular('building')} />
+                <span className={style.type__text}>{props.camp}</span>
+            </div>
         </div>
     );
 }
