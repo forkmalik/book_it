@@ -28,7 +28,7 @@ $cardMargin: 15px;
   align-self: center;
   margin: $cardMargin $cardMargin 5px;
 }
-.time {
+/*.time {
   height: auto;
   display: inline-block;
   //margin-right: 150px;
@@ -43,8 +43,8 @@ $cardMargin: 15px;
   max-width: 20px;
   height: auto;
   vertical-align: middle;
-}
-.type__reservButton {
+}*/
+.type__selectButton {
   height: 50px;
   border-radius: 50px;
   background: linear-gradient(90deg, #ffb740 0%, #df711b 100%);

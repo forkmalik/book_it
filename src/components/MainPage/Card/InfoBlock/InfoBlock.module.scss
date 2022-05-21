@@ -1,0 +1,18 @@
+$cardMargin: 15px;
+
+.info {
+  height: auto;
+  display: inline-block;
+  //margin-right: 150px;
+  margin: $cardMargin $cardMargin 5px;
+}
+.type__text {
+  margin-left: 10px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+.type__icon {
+  max-width: 20px;
+  height: auto;
+  vertical-align: middle;
+}

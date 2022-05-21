@@ -10,8 +10,8 @@ const TypePage = () => {
         <div>
             <UnderlinedText name="types" />
             <div className={style.types}>
-                <Card title="Lecture class" time="1:20 h" img={lecImg} type="lecture" />
-                <Card title="Practice class" time="1:20 h" img={pracImg} type="practice" />
+                <Card title="Lecture class" time="1:20 h" img={lecImg} type="lecture" cardType="classType"/>
+                <Card title="Practice class" time="1:20 h" img={pracImg} type="practice" cardType="classType"/>
             </div>
         </div>
     );
