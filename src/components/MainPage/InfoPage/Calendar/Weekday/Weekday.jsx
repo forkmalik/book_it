@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Weekday.module.scss";
 
 const Weekday = (props) => {
-    if(props.descriptor == "work") {
+    if(props.descriptor === "work") {
         return (
             <ul className={style.weekday}>
                 <li className={style.day}>{props.day}</li>

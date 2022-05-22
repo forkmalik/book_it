@@ -7,8 +7,6 @@ import Classes from "./Classes/Classes";
 
 const MainPage = (props) => {
 
-    console.log(props);
-
     return (
         <div className={style.wrapper} >
             {props.display.display === "info" && <InfoPage />}

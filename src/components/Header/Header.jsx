@@ -1,13 +1,9 @@
 import React from "react";
 import style from "./Header.module.scss";
 import logoImage from "../../assets/ittle-logo.png";
-import {displayType} from "../../redux/actions";
-import {useDispatch} from "react-redux";
 
 
-export default (props) => {
-    const dispatch = useDispatch();
-
+const Header = (props) => {
 
     return (
         <div>
@@ -23,3 +19,4 @@ export default (props) => {
     );
 };
 
+export default Header;
