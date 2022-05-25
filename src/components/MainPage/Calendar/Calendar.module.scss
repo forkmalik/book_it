@@ -1,0 +1,104 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+
+.calendar span {
+    width: 300px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.title {
+    display: inline;
+    margin: 0 100px 0 100px;
+}
+
+.header {
+    max-height: 50px;
+    margin-bottom: 20px;
+}
+
+.header button,
+.header select {
+    width: 50px;
+    height: 50px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+
+.header button {
+    background: transparent;
+    width: max-content;
+    &:hover {
+        cursor: pointer;
+      color: #df711b;
+    }
+}
+
+.table {
+    table-layout: auto;
+    border-spacing: 10px;
+
+}
+
+.table th {
+    &::after {
+        display: block;
+        margin-top: 20px;
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: black;
+    }
+}
+
+.calendar th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.calendar .day {
+    height: 50px;
+    width: 100px;
+    padding: 4px 8px;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.calendar .day:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+.calendar .day.selected {
+    background: linear-gradient(90deg, #ffb740 0%, #df711b 100%);
+}
+
+.calendar .day.today {
+    color: #df711b;
+}
+
+.calendar .day.today:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+.calendar .day.today.selected {
+    background: linear-gradient(90deg, #ffb740 0%, #df711b 100%);
+    color: black;
+}
+
+.angle_left {
+    margin-right: 5px;
+}
+
+.angle_right {
+    margin-left: 5px;
+}
