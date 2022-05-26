@@ -14,8 +14,19 @@ const Card = (props) => {
             <InfoBlock time={props.time} camp={props.camp} />
             <button className={style.type__selectButton}
                     onClick={() => {
-                        props.displayPage()
-                        props.selectType()
+                        props.displayPage();
+                        if(props.hasOwnProperty('selectType')) {
+                            props.selectType();
+                        }
+                        if(props.hasOwnProperty('setType')) {
+                            props.setType('type', props.type);
+                        }
+                        if(props.hasOwnProperty('setCamp')) {
+                            props.setCamp('camp', props.camp);
+                        }
+                        if(props.hasOwnProperty('setClass')) {
+                            props.setClass('class', props.title);
+                        }
                     }}>Select</button>
         </div>
     );

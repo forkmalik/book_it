@@ -42,7 +42,7 @@ const bookingTime = [
 ];
 
 const TimePicker = () => {
-    const timeList = bookingTime.map(elem => <TimeCard startTime={elem.startTime} endTime={elem.endTime} />)
+    const timeList = bookingTime.map((elem, index) => <TimeCard key={index} startTime={elem.startTime} endTime={elem.endTime} />)
 
     return (
         <div className={style.container}>

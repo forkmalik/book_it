@@ -2,7 +2,14 @@ import './App.css';
 import Header from "./components/Header/Header";
 import MainPage from "./components/MainPage/MainPage";
 import {useDispatch} from "react-redux";
-import {displayClasses, displayType, selectLecture, selectPractice} from "./redux/actions";
+import {
+    displayCalendar,
+    displayClasses,
+    displayConfirm,
+    displayType,
+    selectLecture,
+    selectPractice
+} from "./redux/actions";
 
 
 function App() {
@@ -24,10 +31,20 @@ function App() {
         dispatch(selectPractice());
     }
 
+    const displayCalendarHandler = () => {
+        dispatch(displayCalendar());
+    }
+
+    const displayConfirmHandler = () => {
+        dispatch(displayConfirm());
+    }
+
     const mainPageHandlers = {
         displayClassHandler,
         selectLectureHandler,
-        selectPracticeHandler
+        selectPracticeHandler,
+        displayCalendarHandler,
+        displayConfirmHandler
     }
 
     return (

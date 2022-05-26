@@ -6,6 +6,7 @@ import UnderlinedText from "../UnderlinedText/UnderlinedText";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import TimePicker from "./TimePicker/TimePicker";
+import {setBookingInfo} from "../../../redux/data";
 
 
 export default class Calendar extends React.Component {
@@ -61,6 +62,7 @@ export default class Calendar extends React.Component {
         this.setState({ selectedDate: date });
         
         this.props.onChange(date);
+        setBookingInfo('date', date);
     };
 
     render() {

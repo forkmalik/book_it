@@ -29,7 +29,12 @@ let bookingInfo = [
 
 let infoForBooking = {};
 
-export default function getClassData(classType) {
+export function setBookingInfo(param, value) {
+    infoForBooking[param] = value;
+    console.log(infoForBooking);
+}
+
+export function getClassData(classType) {
     if(classType === "practice") {
        return practiceData;
     }

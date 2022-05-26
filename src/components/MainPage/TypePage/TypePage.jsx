@@ -4,6 +4,7 @@ import style from "./TypePage.module.scss";
 import Card from "../Card/Card";
 import lecImg from "../../../assets/lec.png";
 import pracImg from "../../../assets/prac.png";
+import {setBookingInfo} from "../../../redux/data";
 
 const TypePage = (props) => {
     return (
@@ -12,10 +13,10 @@ const TypePage = (props) => {
             <div className={style.types}>
                 <Card title="Lecture class" camp="Central" img={lecImg}
                       type="lecture" displayPage={props.handlers.displayClassHandler}
-                        selectType={props.handlers.selectLectureHandler}/>
+                        selectType={props.handlers.selectLectureHandler} setType={setBookingInfo}/>
                 <Card title="Practice class" camp="Central" img={pracImg}
                       type="practice" displayPage={props.handlers.displayClassHandler}
-                        selectType={props.handlers.selectPracticeHandler}/>
+                        selectType={props.handlers.selectPracticeHandler} setType={setBookingInfo}/>
             </div>
         </div>
     );

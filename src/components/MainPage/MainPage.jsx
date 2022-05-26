@@ -5,6 +5,7 @@ import TypePage from "./TypePage/TypePage";
 import {connect} from "react-redux";
 import Classes from "./Classes/Classes";
 import Calendar from "./Calendar/Calendar";
+import ConfirmPage from "./ConfirmPage/ConfirmPage";
 
 
 const MainPage = (props) => {
@@ -13,9 +14,9 @@ const MainPage = (props) => {
         <div className={style.wrapper} >
             {/*{props.display.display === "info" && <InfoPage />}*/}
             {/*{props.display.display === "type" && <TypePage handlers={props.handlers}/>}*/}
-            {/*{props.display.display === "class" && <Classes type={props.classType.classType}/>}*/}
-            <Calendar />
-            {/*<TypePage />*/}
+            {/*{props.display.display === "class" && <Classes type={props.classType.classType} handlers={props.handlers}/>}*/}
+            {/*{props.display.display === "calendar" && <Calendar />}*/}
+            <ConfirmPage />
         </div>
     );
 

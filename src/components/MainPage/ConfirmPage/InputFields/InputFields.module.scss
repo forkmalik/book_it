@@ -1,0 +1,37 @@
+.input_fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.name, .email {
+  max-height: 30px;
+  margin-bottom: 25px;
+}
+
+.input {
+  background: none;
+  margin-left: 10px;
+  width: 300px;
+  min-height: 20px;
+  box-shadow: none;
+  padding: 0 20px 0 10px;
+  border-radius: 0!important;
+  font-size: 18px!important;
+  border: none;
+  text-transform: none;
+  border-bottom: 1px solid #212b24;
+  outline: none;
+
+  &:focus {
+    border-bottom: 1px solid #df711b;
+  }
+}
+
+.confirm__name {
+  font-size: 18px!important;
+  width: auto;
+  padding: 27px 0 11px 15px;
+  text-align: right;
+  font-weight: 400;
+  text-transform: lowercase;
+}
