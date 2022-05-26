@@ -1,3 +1,10 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
 .calendar {
     display: flex;
     flex-direction: column;
@@ -43,7 +50,7 @@
 
 .table {
     table-layout: auto;
-    border-spacing: 10px;
+    border-spacing: 20px 5px ;
 
 }
 
@@ -65,11 +72,12 @@
 
 .calendar .day {
     height: 50px;
-    width: 100px;
+    width: 60px;
     padding: 4px 8px;
     vertical-align: middle;
     text-align: center;
-    border-radius: 50px;
+    border-radius: 100px;
+    font-weight: 500;
 }
 
 .calendar .day:hover {
@@ -79,6 +87,7 @@
 
 .calendar .day.selected {
     background: linear-gradient(90deg, #ffb740 0%, #df711b 100%);
+    color: white;
 }
 
 .calendar .day.today {
@@ -92,7 +101,7 @@
 
 .calendar .day.today.selected {
     background: linear-gradient(90deg, #ffb740 0%, #df711b 100%);
-    color: black;
+    color: white;
 }
 
 .angle_left {
@@ -101,4 +110,13 @@
 
 .angle_right {
     margin-left: 5px;
+}
+
+.inactive {
+    color: gray;
+    pointer-events: none;
+}
+
+.weekend {
+    color: #df711b;
 }

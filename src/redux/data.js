@@ -18,6 +18,17 @@ let lectureData = [
     { id: 6, title: "C-710", camp: "Central", type: "lecture", image: require("../assets/lec.png") }
 ];
 
+let bookingInfo = [
+    {id: 0, type: "lecture", camp: "Central", class: "C-310", date: "2022-05-26", startTime: "12:00", endTime: "13:20", name: "Vladyslav", email: "polkamarka@gmail.com"},
+    {},
+    {},
+    {},
+    {},
+    {},
+];
+
+let infoForBooking = {};
+
 export default function getClassData(classType) {
     if(classType === "practice") {
        return practiceData;

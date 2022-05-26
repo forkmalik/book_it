@@ -5,6 +5,7 @@ import style from './Calendar.module.scss';
 import UnderlinedText from "../UnderlinedText/UnderlinedText";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import TimePicker from "./TimePicker/TimePicker";
 
 
 export default class Calendar extends React.Component {
@@ -71,48 +72,55 @@ export default class Calendar extends React.Component {
         return (
             <div >
                 <UnderlinedText name="calendar"/>
-                <div className={style.calendar}>
-                    <div className={style.header}>
-                        <button onClick={this.handlePrevMonthButtonClick}>
-                            <FontAwesomeIcon  className={style.angle_left} icon={solid('angle-left')} />
-                            Prev Month
-                        </button>
-                        <div className={style.title}>
-                            <span>{monthNames[this.month]} </span>
-                            <span>{this.year}</span>
+                <div className={style.container}>
+                    <div className={style.calendar}>
+                        <div className={style.header}>
+                            <button onClick={this.handlePrevMonthButtonClick}>
+                                <FontAwesomeIcon  className={style.angle_left} icon={solid('angle-left')} />
+                                Prev Month
+                            </button>
+                            <div className={style.title}>
+                                <span>{monthNames[this.month]} </span>
+                                <span>{this.year}</span>
+                            </div>
+                            <button onClick={this.handleNextMonthButtonClick}>Next Month
+                                <FontAwesomeIcon  className={style.angle_right} icon={solid('angle-right')} />
+                            </button>
                         </div>
-                        <button onClick={this.handleNextMonthButtonClick}>Next Month
-                            <FontAwesomeIcon  className={style.angle_right} icon={solid('angle-right')} />
-                        </button>
-                    </div>
 
-                    <div className={style.table}>
-                        <thead>
-                        <tr>
-                            {weekDayNames.map(name =>
-                                <th key={name}>{name}</th>
-                            )}
-                        </tr>
-                        </thead>
-
-                        <tbody>
-                        {monthData.map((week, index) =>
-                            <tr key={index} className="week">
-                                {week.map((date, index) => date ?
-                                    <td
-                                        key={index}
-                                        className={classnames(style.day,
-                                            calendar.areEqual(date, currentDate) && style.today,
-                                            calendar.areEqual(date, selectedDate) && style.selected)}
-                                        onClick={() => this.handleDayClick(date)}
-                                    >{date.getDate()}</td>
-                                    :
-                                    <td key={index} />
+                        <div className={style.table}>
+                            <thead>
+                            <tr>
+                                {weekDayNames.map(name =>
+                                    <th key={name} className={classnames(name === 'Sat' && style.weekend,
+                                        name === 'Sun' && style.weekend
+                                    )}>{name}</th>
                                 )}
                             </tr>
-                        )}
-                        </tbody>
+                            </thead>
+
+                            <tbody>
+                            {monthData.map((week, index) =>
+                                <tr key={index} className="week">
+                                    {week.map((date, index) => date ?
+                                        <td
+                                            key={index}
+                                            className={classnames(style.day,
+                                                calendar.areEqual(date, currentDate) && style.today,
+                                                calendar.areEqual(date, selectedDate) && style.selected,
+                                                calendar.getDayOfWeek(date) === 5 && style.inactive,
+                                                calendar.getDayOfWeek(date) === 6 && style.inactive)}
+                                            onClick={() => this.handleDayClick(date)}
+                                        >{date.getDate()}</td>
+                                        :
+                                        <td key={index} />
+                                    )}
+                                </tr>
+                            )}
+                            </tbody>
+                        </div>
                     </div>
+                    <TimePicker />
                 </div>
 
             </div>
