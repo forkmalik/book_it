@@ -41,8 +41,10 @@ const bookingTime = [
     }
 ];
 
-const TimePicker = () => {
-    const timeList = bookingTime.map((elem, index) => <TimeCard key={index} startTime={elem.startTime} endTime={elem.endTime} />)
+const TimePicker = (props) => {
+    const timeList = bookingTime.map((elem, index) => <TimeCard key={index}
+                                                                startTime={elem.startTime} endTime={elem.endTime}
+                                                                    displayPage={props.handlers.displayConfirmHandler}/>)
 
     return (
         <div className={style.container}>

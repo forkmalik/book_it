@@ -122,7 +122,7 @@ export default class Calendar extends React.Component {
                             </tbody>
                         </div>
                     </div>
-                    <TimePicker />
+                    <TimePicker handlers={this.props.handlers}/>
                 </div>
 
             </div>

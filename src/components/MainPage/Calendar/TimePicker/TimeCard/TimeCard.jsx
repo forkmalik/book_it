@@ -7,6 +7,7 @@ const TimeCard = (props) => {
         <div className={style.card} onClick={() => {
             setBookingInfo('startTime', props.startTime);
             setBookingInfo('endTime', props.endTime);
+            props.displayPage();
         }}>
             {props.startTime} - {props.endTime}
         </div>

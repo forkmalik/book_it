@@ -5,7 +5,7 @@ import {useDispatch} from "react-redux";
 import {
     displayCalendar,
     displayClasses,
-    displayConfirm,
+    displayConfirm, displayInfo,
     displayType,
     selectLecture,
     selectPractice
@@ -14,6 +14,10 @@ import {
 
 function App() {
     const dispatch = useDispatch();
+
+    const displayInfoHandler = () => {
+        dispatch(displayInfo());
+    }
 
     const displayTypeHandler = () => {
         dispatch(displayType());
@@ -40,6 +44,7 @@ function App() {
     }
 
     const mainPageHandlers = {
+        displayInfoHandler,
         displayClassHandler,
         selectLectureHandler,
         selectPracticeHandler,

@@ -1,4 +1,19 @@
-import {DISPLAY_CALENDAR, DISPLAY_CLASS, DISPLAY_CONFIRM, DISPLAY_TYPE, SELECT_LECTURE, SELECT_PRACTICE} from "./types";
+import {
+    DISPLAY_CALENDAR,
+    DISPLAY_CLASS,
+    DISPLAY_CONFIRM,
+    DISPLAY_INFO,
+    DISPLAY_TYPE,
+    SELECT_LECTURE,
+    SELECT_PRACTICE
+} from "./types";
+
+export function displayInfo() {
+    return {
+        type: DISPLAY_INFO,
+        payload: "info"
+    }
+}
 
 export function displayType() {
     return {

@@ -1,0 +1,56 @@
+.data {
+  //flex-direction: column;
+  font-size: 18px;
+  margin-right: 300px;
+  //width: 300px;
+}
+
+.header {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.type {
+  padding-top: 30px;
+}
+
+.bold_text {
+  font-weight: 600;
+}
+
+.number_value, .time_value, .date_value, .type_value {
+  margin-left: 80px;
+  width: 100px;
+}
+
+.time_value, .number_value {
+  margin-left: 50px;
+}
+
+
+.data_item {
+  max-height: 30px;
+  margin-top: 30px;
+}
+
+.confirm__btn {
+  max-height: 50px;
+  width: 200px;
+  margin-top: 20px;
+  border: none;
+  background: linear-gradient(90deg, #ffb740 0%, #df711b 100%);
+  border-radius: 300px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 16px;
+  //padding: 25px 80px;
+  transition: all 0.5s;
+
+  &:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}

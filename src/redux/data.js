@@ -34,6 +34,10 @@ export function setBookingInfo(param, value) {
     console.log(infoForBooking);
 }
 
+export function getBookingInfo() {
+    return infoForBooking;
+}
+
 export function getClassData(classType) {
     if(classType === "practice") {
        return practiceData;

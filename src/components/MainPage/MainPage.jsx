@@ -12,11 +12,11 @@ const MainPage = (props) => {
 
     return (
         <div className={style.wrapper} >
-            {/*{props.display.display === "info" && <InfoPage />}*/}
-            {/*{props.display.display === "type" && <TypePage handlers={props.handlers}/>}*/}
-            {/*{props.display.display === "class" && <Classes type={props.classType.classType} handlers={props.handlers}/>}*/}
-            {/*{props.display.display === "calendar" && <Calendar />}*/}
-            <ConfirmPage />
+            {props.display.display === "info" && <InfoPage />}
+            {props.display.display === "type" && <TypePage handlers={props.handlers}/>}
+            {props.display.display === "class" && <Classes type={props.classType.classType} handlers={props.handlers}/>}
+            {props.display.display === "calendar" && <Calendar handlers={props.handlers}/>}
+            {props.display.display === "confirm" && <ConfirmPage handlers={props.handlers}/>}
         </div>
     );
 
