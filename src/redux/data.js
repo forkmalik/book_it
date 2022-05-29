@@ -18,20 +18,24 @@ let lectureData = [
     { id: 6, title: "C-710", camp: "Central", type: "lecture", image: require("../assets/lec.png") }
 ];
 
-let bookingInfo = [
-    {id: 0, type: "lecture", camp: "Central", class: "C-310", date: "2022-05-26", startTime: "12:00", endTime: "13:20", name: "Vladyslav", email: "polkamarka@gmail.com"},
-    {},
-    {},
-    {},
-    {},
-    {},
+let baseInfo = [
+    {id: 0, type: "lecture", camp: "Central", class: "C-310", date: "30/05/2022", startTime: "12:00", endTime: "13:20", name: "Vladyslav", email: "polkamarka@gmail.com"},
+    {id: 0, type: "lecture", camp: "Central", class: "C-310", date: "27/05/2022", startTime: "12:00", endTime: "13:20", name: "Vladyslav", email: "polkamarka@gmail.com"},
+    {id: 0, type: "lecture", camp: "Central", class: "C-310", date: "25/05/2022", startTime: "12:00", endTime: "13:20", name: "Vladyslav", email: "polkamarka@gmail.com"},
+    {id: 0, type: "lecture", camp: "Central", class: "C-310", date: "31/05/2022", startTime: "12:00", endTime: "13:20", name: "Vladyslav", email: "polkamarka@gmail.com"},
+    {id: 0, type: "lecture", camp: "Central", class: "C-310", date: "14/05/2022", startTime: "12:00", endTime: "13:20", name: "Vladyslav", email: "polkamarka@gmail.com"},
+    {id: 0, type: "lecture", camp: "Central", class: "C-310", date: "12/05/2022", startTime: "12:00", endTime: "13:20", name: "Vladyslav", email: "polkamarka@gmail.com"},
 ];
+
+export function getBaseInfo() {
+    return baseInfo;
+}
 
 let infoForBooking = {};
 
 export function setBookingInfo(param, value) {
     infoForBooking[param] = value;
-    console.log(infoForBooking);
+    //console.log(infoForBooking);
 }
 
 export function getBookingInfo() {

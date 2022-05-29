@@ -19,6 +19,49 @@ const Month = {
     December: 11
 };
 
+const Time = [
+    {
+        startTime: "8:00",
+        endTime: "9:20"
+    },
+    {
+        startTime: "9:20",
+        endTime: "10:40"
+    },
+    {
+        startTime: "10:40",
+        endTime: "12:00"
+    },
+    {
+        startTime: "12:00",
+        endTime: "13:20"
+    },
+    {
+        startTime: "13:20",
+        endTime: "14:40"
+    },
+    {
+        startTime: "14:40",
+        endTime: "16:00"
+    },
+    {
+        startTime: "16:00",
+        endTime: "17:20"
+    },
+    {
+        startTime: "17:20",
+        endTime: "18:40"
+    },
+    {
+        startTime: "18:40",
+        endTime: "20:00"
+    }
+];
+
+export function getTime() {
+    return Time;
+}
+
 export function areEqual(a, b) {
     if (!a || !b) return false;
 

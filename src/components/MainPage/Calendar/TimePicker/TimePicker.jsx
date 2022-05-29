@@ -1,48 +1,15 @@
 import React from 'react';
 import style from './TimePicker.module.scss';
 import TimeCard from "./TimeCard/TimeCard";
+import {getBaseInfo, getBookingInfo} from "../../../../redux/data";
 
-const bookingTime = [
-    {
-        startTime: "8:00",
-        endTime: "9:20"
-    },
-    {
-        startTime: "9:20",
-        endTime: "10:40"
-    },
-    {
-        startTime: "10:40",
-        endTime: "12:00"
-    },
-    {
-        startTime: "12:00",
-        endTime: "13:20"
-    },
-    {
-        startTime: "13:20",
-        endTime: "14:40"
-    },
-    {
-        startTime: "14:40",
-        endTime: "16:00"
-    },
-    {
-        startTime: "16:00",
-        endTime: "17:20"
-    },
-    {
-        startTime: "17:20",
-        endTime: "18:40"
-    },
-    {
-        startTime: "18:40",
-        endTime: "20:00"
-    }
-];
+
 
 const TimePicker = (props) => {
-    const timeList = bookingTime.map((elem, index) => <TimeCard key={index}
+
+    //console.log(bookingTime);
+
+    const timeList = props.bookingTime.map((elem, index) => <TimeCard key={index}
                                                                 startTime={elem.startTime} endTime={elem.endTime}
                                                                     displayPage={props.handlers.displayConfirmHandler}/>)
 

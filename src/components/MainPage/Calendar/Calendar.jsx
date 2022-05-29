@@ -6,7 +6,7 @@ import UnderlinedText from "../UnderlinedText/UnderlinedText";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import TimePicker from "./TimePicker/TimePicker";
-import {setBookingInfo} from "../../../redux/data";
+import {getBaseInfo, getBookingInfo, setBookingInfo} from "../../../redux/data";
 
 
 export default class Calendar extends React.Component {
@@ -22,7 +22,8 @@ export default class Calendar extends React.Component {
     state = {
         date: this.props.date,
         currentDate: new Date(),
-        selectedDate: null
+        selectedDate: null,
+        bookingTime: []
     };
 
     get year() {
@@ -35,6 +36,38 @@ export default class Calendar extends React.Component {
 
     get day() {
         return this.state.date.getDate();
+    }
+
+    loadBookingTime(selectedDate) {
+        let bookingInfo = getBookingInfo();
+        let baseInfo = getBaseInfo();
+        let time = calendar.getTime();
+        let bookingTime = [];
+        let registeredTime = [];
+
+        // console.log(baseInfo[0].date);
+        // console.log(selectedDate.toLocaleDateString('en-GB'));
+        console.log(bookingInfo);
+
+        baseInfo.forEach((elem) => {
+            console.log(elem.date);
+            if(elem.class === bookingInfo.class && elem.date === selectedDate.toLocaleDateString('en-GB')) {
+                registeredTime.push({startTime: elem.startTime,
+                                endTime: elem.endTime});
+            }
+
+        });
+
+        time.forEach((timeElem => {
+            if(registeredTime.length > 0 && timeElem.startTime != registeredTime[0].startTime) {
+                bookingTime.push(timeElem);
+            }
+        }));
+
+        if (bookingTime.length === 0) {
+            return time;
+        }
+        return bookingTime;
     }
 
     handlePrevMonthButtonClick = () => {
@@ -59,7 +92,9 @@ export default class Calendar extends React.Component {
     };
 
     handleDayClick = date => {
-        this.setState({ selectedDate: date });
+        this.setState({ selectedDate: date, bookingTime: this.loadBookingTime(date) });
+
+        //console.log(this.state);
         
         this.props.onChange(date);
         setBookingInfo('date', date);
@@ -122,7 +157,7 @@ export default class Calendar extends React.Component {
                             </tbody>
                         </div>
                     </div>
-                    <TimePicker handlers={this.props.handlers}/>
+                    <TimePicker handlers={this.props.handlers} bookingTime={this.state.bookingTime}/>
                 </div>
 
             </div>
