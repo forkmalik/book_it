@@ -11,7 +11,7 @@ const Card = (props) => {
             </div>
 
             <h3 className={style.type__title}>{props.title}</h3>
-            <InfoBlock time={props.time} camp={props.camp} />
+            {props.cardType != "campus" && <InfoBlock time={props.time} camp={props.camp} />}
             <button className={style.type__selectButton}
                     onClick={() => {
                         props.displayPage();
@@ -22,7 +22,7 @@ const Card = (props) => {
                             props.setType('type', props.type);
                         }
                         if(props.hasOwnProperty('setCamp')) {
-                            props.setCamp('camp', props.camp);
+                            props.setCamp('camp', props.title);
                         }
                         if(props.hasOwnProperty('setClass')) {
                             props.setClass('class', props.title);

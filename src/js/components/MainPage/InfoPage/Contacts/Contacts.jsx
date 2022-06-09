@@ -9,7 +9,7 @@ const Contacts = () => {
         <div className={style.contacts}>
             <div className={style.contacts__element}>
                 <img src={mailImg} className={style.contacts__img} alt="" />
-                <a href="#" className={style.contacts__link}>
+                <a href="src/js/components/MainPage/InfoPage/Contacts/Contacts#" className={style.contacts__link}>
                     polkamarka@gmail.com
                 </a>
             </div>
@@ -22,7 +22,7 @@ const Contacts = () => {
             </div>
             <div className={style.contacts__element}>
                 <img src={planetImg} className={style.contacts__img} alt="" />
-                <a href="https://sumdu.edu.ua/uk/" className={style.contacts__link}>
+                <a href="src/js/components/MainPage/InfoPage/Contacts/Contacts" className={style.contacts__link}>
                     sumdu.edu.ua
                 </a>
             </div>

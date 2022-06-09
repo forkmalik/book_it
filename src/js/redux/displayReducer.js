@@ -1,4 +1,4 @@
-import {DISPLAY_CALENDAR, DISPLAY_CLASS, DISPLAY_CONFIRM, DISPLAY_INFO, DISPLAY_TYPE} from "./types";
+import {DISPLAY_CALENDAR, DISPLAY_CAMPUS, DISPLAY_CLASS, DISPLAY_CONFIRM, DISPLAY_INFO, DISPLAY_TYPE} from "./types";
 
 const initialState = {
     display: "info"
@@ -7,6 +7,8 @@ const initialState = {
 export const displayReducer = (state = initialState, action) => {
     switch (action.type) {
         case DISPLAY_INFO:
+            return {...state, display: action.payload}
+        case DISPLAY_CAMPUS:
             return {...state, display: action.payload}
         case DISPLAY_TYPE:
             return {...state, display: action.payload}

@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import MainPage from "./components/MainPage/MainPage";
 import {useDispatch} from "react-redux";
 import {
-    displayCalendar,
+    displayCalendar, displayCampus,
     displayClasses,
     displayConfirm, displayInfo,
     displayType,
@@ -17,6 +17,10 @@ function App() {
 
     const displayInfoHandler = () => {
         dispatch(displayInfo());
+    }
+
+    const displayCampusHandler = () => {
+        dispatch(displayCampus());
     }
 
     const displayTypeHandler = () => {
@@ -45,6 +49,7 @@ function App() {
 
     const mainPageHandlers = {
         displayInfoHandler,
+        displayTypeHandler,
         displayClassHandler,
         selectLectureHandler,
         selectPracticeHandler,
@@ -54,7 +59,7 @@ function App() {
 
     return (
         <div className="app">
-            <Header displayType={displayTypeHandler}/>
+            <Header displayType={displayCampusHandler}/>
             <MainPage handlers={mainPageHandlers}/>
         </div>
 

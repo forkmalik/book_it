@@ -5,7 +5,6 @@ import Card from "../Card/Card";
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import UnderlinedText from "../UnderlinedText/UnderlinedText";
-import {displayCalendar} from "../../../redux/actions";
 
 const responsive = {
     0: { items: 1 },
@@ -17,7 +16,7 @@ const Classes = (props) => {
     let classData = getClassData(props.type);
     const classList = classData.map((item) => <Card title={item.title} camp={item.camp} img={item.image}
                                                     type={item.type} cardType="classes" displayPage={props.handlers.displayCalendarHandler}
-                                                    setClass={setBookingInfo} setCamp={setBookingInfo}/>)
+                                                    setClass={setBookingInfo} />)
 
 
     return (

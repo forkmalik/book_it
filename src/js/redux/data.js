@@ -1,3 +1,11 @@
+let campuses = [
+    {id: 0, campus_name: "Central", image: require("../assets/Central.jpg")},
+    {id: 1, campus_name: "Main", image: require("../assets/Main.jpg")},
+    {id: 2, campus_name: "ET", image: require("../assets/ET.jpg")},
+    {id: 3, campus_name: "Engineering", image: require("../assets/Engineering.jpg")},
+    {id: 4, campus_name: "New", image: require("../assets/New.jpg")},
+]
+
 let practiceData = [
     { id: 0, title: "C-310", camp: "Central", type: "practice", image: require("../assets/prac.png") },
     { id: 1, title: "C-210", camp: "Central", type: "practice", image: require("../assets/prac.png") },
@@ -29,6 +37,10 @@ let baseInfo = [
 
 export function getBaseInfo() {
     return baseInfo;
+}
+
+export function getCampuses() {
+    return campuses;
 }
 
 let infoForBooking = {};

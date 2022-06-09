@@ -1,5 +1,5 @@
 import {
-    DISPLAY_CALENDAR,
+    DISPLAY_CALENDAR, DISPLAY_CAMPUS,
     DISPLAY_CLASS,
     DISPLAY_CONFIRM,
     DISPLAY_INFO,
@@ -12,6 +12,13 @@ export function displayInfo() {
     return {
         type: DISPLAY_INFO,
         payload: "info"
+    }
+}
+
+export function displayCampus() {
+    return {
+        type: DISPLAY_CAMPUS,
+        payload: "campus"
     }
 }
 
