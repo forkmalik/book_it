@@ -146,7 +146,8 @@ export default class Calendar extends React.Component {
                                                 calendar.areEqual(date, currentDate) && style.today,
                                                 calendar.areEqual(date, selectedDate) && style.selected,
                                                 calendar.getDayOfWeek(date) === 5 && style.inactive,
-                                                calendar.getDayOfWeek(date) === 6 && style.inactive)}
+                                                calendar.getDayOfWeek(date) === 6 && style.inactive,
+                                                date < currentDate.setHours(0,0,0,0) && style.inactive)}
                                             onClick={() => this.handleDayClick(date)}
                                         >{date.getDate()}</td>
                                         :

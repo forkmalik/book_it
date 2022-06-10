@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Calendar.module.scss";
+import style from "./Schedule.module.scss";
 import Weekday from "./Weekday/Weekday";
 
 const daysArr = [
@@ -16,7 +16,7 @@ let weekdayElem =
     daysArr.map(weekday => <Weekday day={weekday.day} openTime={weekday.openTime}
                                     closeTime={weekday.closeTime} descriptor={weekday.descriptor} key={weekday.day}/>);
 
-const Calendar = () => {
+const Schedule = () => {
     return (
         <div className={style.calendar}>
             {weekdayElem}
@@ -24,4 +24,4 @@ const Calendar = () => {
     );
 };
 
-export default Calendar;
+export default Schedule;

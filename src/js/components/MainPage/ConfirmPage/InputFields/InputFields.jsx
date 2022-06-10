@@ -9,12 +9,12 @@ const InputFields = () => {
             <div className={style.name}>
                 <span className={classnames(style.confirm__name, style.fields)}>name:</span>
                 <input type="text" className={classnames(style.name_field, style.input)}
-                       onBlur={(e) => setBookingInfo('name', e.target.value)} placeholder="Enter your name"/>
+                       onBlur={(e) => setBookingInfo('name', e.target.value)} placeholder="Petro Petrenko"/>
             </div>
             <div className={style.email}>
                 <span className={classnames(style.confirm__name, style.fields)}>email:</span>
                 <input type="text" className={classnames(style.email_field, style.input)}
-                       onBlur={(e) => setBookingInfo('email', e.target.value)} placeholder="Enter email address"/>
+                       onBlur={(e) => setBookingInfo('email', e.target.value)} placeholder="petrenko@gmail.com"/>
             </div>
 
 

@@ -1,12 +1,12 @@
 import React from "react";
-import Calendar from "./Calendar/Calendar";
+import Schedule from "./Calendar/Schedule";
 import Contacts from "./Contacts/Contacts";
 import style from "./InfoPage.module.scss";
 
 const InfoPage = () => {
     return (
         <div className={style.main}>
-            <Calendar />
+            <Schedule />
             <Contacts />
         </div>
     );

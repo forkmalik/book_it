@@ -29,7 +29,7 @@ const Campus = (props) => {
                 // paddingRight={200}
                 responsive={responsive}
                 controlsStrategy="responsive"
-                disableButtonsControls={true}
+                disableButtonsControls={false}
             />
         </div>
     );
